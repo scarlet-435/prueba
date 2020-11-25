@@ -27,7 +27,7 @@ public class Controlador {
 		ResultadoVO salida = new ResultadoVO();
 		
 		Cuadratura result = serv.getEmpresa(18);
-		System.out.println(serv.getEmpresa(18)+"--------------");
+		System.out.println(serv.getEmpresa(18)+"---d-----------");
 		salida.setObject(result);
 		return new ResponseEntity<ResultadoVO>(salida, HttpStatus.OK);
 	}
