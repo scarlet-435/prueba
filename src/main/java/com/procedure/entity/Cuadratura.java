@@ -7,47 +7,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="cdt_cuadratura",schema = "ccylsky-prod")
 public class Cuadratura {
-	@Id
-	@Column(name = "id")
 	private int id;
-	
-	@Column(name = "id_local")
 	private int idLocal;
-	
-	@Column(name = "id_usuario")
 	private int idUsuario;
-	
-	@Column(name = "fecha_contable")
 	private Date fechaContable;
-	
-	@Column(name = "estado")
 	private int estado;
-	
-	@Column(name = "created")
 	private Date created;
-	
-	@Column(name = "updated")
 	private Date updated;
-	
-	@Column(name = "comentario")
 	private String comentario;
 	
-	public Cuadratura(int id, int idLocal, int idUsuario, Date fechaContable, int estado, Date created, Date updated,
-			String comentario) {
-		super();
-		this.id = id;
-		this.idLocal = idLocal;
-		this.idUsuario = idUsuario;
-		this.fechaContable = fechaContable;
-		this.estado = estado;
-		this.created = created;
-		this.updated = updated;
-		this.comentario = comentario;
-	}
-
 	public Cuadratura() {
 		
 	}
@@ -122,11 +91,4 @@ public class Cuadratura {
 				+ fechaContable + ", estado=" + estado + ", created=" + created + ", updated=" + updated
 				+ ", comentario=" + comentario + "]";
 	}
-	
-	
-	
-	
-	
-	
-
 }

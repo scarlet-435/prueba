@@ -1,8 +1,12 @@
 package com.procedure.mapper;
 
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
 import com.procedure.entity.Cuadratura;
@@ -101,7 +105,10 @@ public interface ConsultaSelect {
 //			+ "			  AND tx.monto_vendido = tx.monto_rendido\r\n"
 //			+ "			  AND ( tx.monto_depositado - tx.monto_depositable ) >= 0;")
 //	public String proce(@Param("par_empresa") int token,@Param("par_finicio") String fecha_inicio,@Param("par_ffin") String fecha_fin);
-	@Select("select fecha_contable,id from cdt_cuadratura where id_local =#{idlocal};")
-	public Cuadratura getEmpresa(@Param("idlocal") int token);
+	@Select("select fecha_contable,id from cdt_cuadratura where id_local = #{idlocal}")
+	@Results({
+		@Result(property = "fechaContable", column = "fecha_contable")
+	})
+	public List<Cuadratura> getEmpresa(@Param("idlocal") String idlocal);
 
 }
