@@ -5,10 +5,10 @@ package com.procedure.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+
 import org.springframework.stereotype.Service;
 
-import com.procedure.entity.Cuadratura;
+import com.procedure.entity.Select;
 import com.procedure.mapper.ConsultaSelect;
 
 @Service
@@ -19,8 +19,9 @@ public class ServiceImplem implements ServiceInterface{
 
 		
 	@Override
-	public List<Cuadratura> getEmpresa(String token) {
-		return sel.getEmpresa(token);
+	public List<Select> proce(String token, String fecha_inicio, String fecha_fin) {
+		
+		return sel.proce(token,fecha_inicio,fecha_fin);
 	}
 
 }

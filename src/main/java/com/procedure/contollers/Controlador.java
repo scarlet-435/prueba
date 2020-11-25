@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.procedure.entity.Cuadratura;
+import com.procedure.entity.Select;
 import com.procedure.service.ServiceInterface;
 import com.procedure.vo.ResultadoVO;
 
@@ -26,7 +27,7 @@ public class Controlador {
 	@GetMapping("/hola")
 	public ResponseEntity<?> hola2() throws JsonProcessingException {
 		ResultadoVO salida = new ResultadoVO();
-		List<Cuadratura> result = serv.getEmpresa("18");
+		List<Select> result = serv.proce("1000","2018-06-01","2018-10-24");
 //		muestra el objeto como json
 //		System.out.println(mapper.writeValueAsString(result));
 //		System.out.println(serv.getEmpresa(18)+"---d-----------");
