@@ -1,4 +1,4 @@
-package com.procedure.service;
+package com.procedure.service.impl;
 
 
 
@@ -10,18 +10,20 @@ import org.springframework.stereotype.Service;
 
 import com.procedure.entity.Select;
 import com.procedure.mapper.ConsultaSelect;
+import com.procedure.mapper.ConsultaSelect2;
+import com.procedure.service.ServiceInterface;
 
 @Service
 public class ServiceImplem implements ServiceInterface{
 	
 	@Autowired
-	private ConsultaSelect sel;
+	private ConsultaSelect2 sel;
 
 		
 	@Override
-	public List<Select> proce(String token, String fecha_inicio, String fecha_fin) {
+	public List<Select> proce() {
 		
-		return sel.proce(token,fecha_inicio,fecha_fin);
+		return sel.proce();
 	}
 
 }

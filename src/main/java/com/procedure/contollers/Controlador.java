@@ -27,7 +27,7 @@ public class Controlador {
 	@GetMapping("/hola")
 	public ResponseEntity<?> hola2() throws JsonProcessingException {
 		ResultadoVO salida = new ResultadoVO();
-		List<Select> result = serv.proce("1000","2018-06-01","2018-10-24");
+		List<Select> result = serv.proce();
 //		muestra el objeto como json
 //		System.out.println(mapper.writeValueAsString(result));
 //		System.out.println(serv.getEmpresa(18)+"---d-----------");

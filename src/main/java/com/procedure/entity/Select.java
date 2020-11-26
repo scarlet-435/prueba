@@ -74,7 +74,9 @@ public class Select {
 		this.estado = estado;
 	}
 
-	
-	
-	
+	@Override
+	public String toString() {
+		return "Select [idEmpresa=" + idEmpresa + ", idRendicion=" + idRendicion + ", fecha=" + fecha + ", idLocal="
+				+ idLocal + ", idUsuario=" + idUsuario + "estado="+estado+"]";
+	}
 }
