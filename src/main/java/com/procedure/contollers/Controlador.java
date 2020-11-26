@@ -31,6 +31,7 @@ public class Controlador {
 //		muestra el objeto como json
 //		System.out.println(mapper.writeValueAsString(result));
 //		System.out.println(serv.getEmpresa(18)+"---d-----------");
+		//mensaje pa q s di quieres
 		salida.setPeticion("asdasd", "12/12/2020", "BIEN", "01");
 		salida.setObject(result);
 		return new ResponseEntity<ResultadoVO>(salida, HttpStatus.OK);
