@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +27,7 @@ import com.procedure.vo.ResultadoVO;
 @RequestMapping("/api")
 public class Controlador {
 	
+	private static final Log LOGGER = LogFactory.getLog(Controlador.class);
 	@Autowired
 	private ServiceInterface serv;
 	
@@ -43,7 +46,7 @@ public class Controlador {
 		System.out.println(c);
 		
 		serv.updateCuadratura(c);
-		
+		LOGGER.info("Result Company => "+new ObjectMapper().writeValueAsString(result));
 //serv.insertCuadratura2(c);
 
 		
