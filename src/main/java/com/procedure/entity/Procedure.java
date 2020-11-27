@@ -1,6 +1,6 @@
 package com.procedure.entity;
 
-public class Select {
+public class Procedure {
 
 	private String idEmpresa;
 	
@@ -64,7 +64,7 @@ public class Select {
 		this.idUsuario = idUsuario;
 	}
 
-	public Select(String idEmpresa, String idRendicion, String fecha, String idLocal, String idUsuario, String estado) {
+	public Procedure(String idEmpresa, String idRendicion, String fecha, String idLocal, String idUsuario, String estado) {
 		super();
 		this.idEmpresa = idEmpresa;
 		this.idRendicion = idRendicion;
@@ -73,6 +73,7 @@ public class Select {
 		this.idUsuario = idUsuario;
 		this.estado = estado;
 	}
+	public Procedure() {}
 
 	@Override
 	public String toString() {
