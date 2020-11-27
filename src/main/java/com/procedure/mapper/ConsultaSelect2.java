@@ -59,23 +59,13 @@ public interface ConsultaSelect2 {
 	public List<com.procedure.entity.Procedure> proce();
 	
 
-	
-//	@Update("UPDATE cdt_cuadratura SET estado = 5 WHERE id = #{v_IDRENDICION} AND id_local = #{v_ID_LOCAL} AND fecha_contable = #{v_FECHA_CON};\r\n"
-//			+ "  	 INSERT INTO cdt_estado_cuadratura (`id_cuadratura`,`id_usuario`,`estado`) VALUES ( #{v_IDRENDICION}, 1, #{v_ESTADO});\r\n"
-//			+ "  	 INSERT INTO cdt_estado_cuadratura (`id_cuadratura`,`id_usuario`,`estado`) VALUES ( #{v_IDRENDICION}, #{v_ID_USUARIO}, #{v_ESTADO});\r\n"
-//			+ "     COMMIT;")
-//	public void updateCuadratura(@Param("v_IDRENDICION") String rendicion,@Param("v_ID_LOCAL") String local,@Param("v_FECHA_CON") String fecha,
-//			@Param("v_ESTADO") String estado,@Param("v_ID_USUARIO") String usuario);
-//	
-
 	//@Update("UPDATE cdt_cuadratura SET estado = 5 WHERE id = #{v_IDRENDICION} AND id_local = #{v_ID_LOCAL} AND fecha_contable = #{v_FECHA_CON}; ")
 	//public void updateCuadratura( @Param("v_IDRENDICION") String idrendicion,@Param("v_ID_LOCAL") String local,@Param("v_FECHA_CON") String fecha);
 	
 	@Update({" <script> "
 			+ "<foreach collection='listado' item='cont' index='index'  >"
-			+ "UPDATE cdt_estado_cuadratura SET estado = 7 "
-			//+ "WHERE id=" 
-			//+ "WHERE id = #{cont.idRendicion} AND id_local = #{cont.idLocal} AND fecha_contable = #{cont.fecha}; "
+			+ "UPDATE cdt_cuadratura SET estado = 5 "
+			+ "WHERE id = #{cont.idRendicion} AND id_local = #{cont.idLocal} AND fecha_contable = #{cont.fecha}; "
 			+ " </foreach>  "
 			+ " </script> "})
 	public void updateCuadratura(@Param("listado") List<Procedure> listado);
